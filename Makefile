@@ -6,6 +6,7 @@ build: clean
 test: clean
 	opam exec -- dune runtest -f
 	opam exec -- dune exec scripts/micro_bench.exe -- paxos -rate 100
+	opam exec -- dune exec scripts/micro_bench.exe -- raft  -rate 100
 
 .PHONY: clean
 clean:
